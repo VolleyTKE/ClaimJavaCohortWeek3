@@ -15,7 +15,7 @@ import java.util.Collections;
 public class InventoryManager {
 
     private ArrayList<InventoryItem> inventory = new ArrayList<InventoryItem>();
-    String fileName = "C:\\Users\\Chris\\Desktop\\Project3-Java061415-caebdf8c278b10bdbf3a98d67334b70de41291f1\\resources\\survival_store_inventory.csv";
+    String fileName = "C:\\Users\\Chris\\Desktop\\Claim\\ClaimJavaCohortWeek3\\Project3-Java061415-caebdf8c278b10bdbf3a98d67334b70de41291f1\\resources\\survival_store_inventory.csv";
     public InventoryManager(){
         inventory = new CsvReader().csvReader(fileName);
     }
@@ -47,21 +47,26 @@ public class InventoryManager {
      
      
     public void sortCategory()  {
-        //Collections.sort(inventory, );
+        Collections.sort(getInventory(), new CategoryComparator());
+        printInventory(getInventory()); 
     }
     
     public void sortName()  {
-        System.out.println("Sort By Name!");
+        Collections.sort(getInventory(), new NameComparator());
+        printInventory(getInventory()); 
     }
     
     public void sortPrice()  {
-        System.out.println("Sort By Price!");
+        Collections.sort(getInventory(), new priceComparator());
+        printInventory(getInventory());        
         
     }
     
     public boolean buy(String itemId){
         return false;
     }
+    
+    
     
     
 }

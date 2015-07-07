@@ -35,7 +35,7 @@ class Menu {
                 getInventory();
                 break;
             case 2 : //System.out.println("sort products");
-                //items.printInventory(items.getInventory());
+                sortInventory(items);
                 break;
             case 3 : //System.out.println("View Cart");
                 break;
@@ -69,10 +69,10 @@ class Menu {
                 items.sortCategory();
                 break;
             case 2 : System.out.println("sort by Name");
-                //dao.inventory.sortName();
+                items.sortName();
                 break;
             case 3 : System.out.println("sort by Price");
-                //dao.inventory.sortPrice();
+                items.sortPrice();
                 break;
     }
     }

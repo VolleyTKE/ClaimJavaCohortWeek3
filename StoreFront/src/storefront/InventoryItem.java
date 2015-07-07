@@ -75,7 +75,7 @@ public class InventoryItem {
         String list = String.format("%-27s%55s%10s%4s", Category, Name, price, stock);
         return list;
     }
-    
-    
+
+        
     
 }
